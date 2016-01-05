@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Server Sent Event</title>
+</head>
+<body>
+
+
+<script>
+    var evtSource = new EventSource("sse.php");
+    evtSource.onmessage = function(e) {
+        document.body.innerHTML += e.data + '<br>';
+    }
+</script>
+
+</body>
+</html>
